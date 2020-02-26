@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">todo</string>
+    <string name="action_settings">設定</string>
+    <string name="action_back">戻る</string>
+    <string name="action_complete">完了</string>
+
+<!--    Todoタブ-->
+    <string name="tab_todo">未完了</string>
+    <string name="tab_todo_done">完了済み</string>
+
+<!--    Todo編集-->
+    <string name="edit_label_title">タイトル</string>
+    <string name="edit_label_detail">内容</string>
+    <string name="edit_label_done">完了済み</string>
+    <string name="edit_label_limit">期限</string>
+
+    <string name="edit_label_limit_date">日付</string>
+    <string name="edit_label_limit_time">時刻</string>
+    <string name="edit_switch_done_on">完了</string>
+    <string name="edit_switch_done_off">未完了</string>
+
+<!--    メッセージ-->
+    <string name="message_save_success">登録しました。</string>
+    <string name="message_save_failure">登録に失敗しました。</string>
+    <string name="message_find_failure">データが取得できませんでした。</string>
+    <string name="message_update_failure">データの更新に失敗しました。</string>
+
+<!--    FirebaseStore-->
+    <string name="collection_name">todo_list</string>
+
+</resources>

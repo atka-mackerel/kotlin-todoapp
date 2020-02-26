@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="view_model"
+            type="fish.eyed.sleepy.todo.data.TodoViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/labelTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_label_title" />
+
+                <EditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:hint="@string/edit_label_title"
+                    android:inputType="textPersonName"
+                    android:text="@={view_model.title}" />
+
+                <TextView
+                    android:id="@+id/labelDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_label_detail" />
+
+                <EditText
+                    android:id="@+id/editDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/edit_label_detail"
+                    android:text="@={view_model.detail}"
+                    android:inputType="textMultiLine"
+                    android:minLines="10" />
+
+                <TextView
+                    android:id="@+id/labelLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/edit_label_limit" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/editDateLimit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="@string/edit_label_limit_date"
+                        android:text="@={view_model.date}"
+                        android:inputType="date" />
+
+                    <EditText
+                        android:id="@+id/editTimeLimit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:hint="@string/edit_label_limit_time"
+                        android:text="@={view_model.time}"
+                        android:inputType="time" />
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/switchDone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checked="@={view_model.done}"
+                    android:text="@string/edit_label_done"
+                    android:textOff="@string/edit_switch_done_off"
+                    android:textOn="@string/edit_switch_done_on" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
